@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us & Get Quote</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #222;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input, textarea, select, button {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            width: 100%;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Contact Us & Get Quote</h1>
+</header>
+
+<div class="container" id="contact-us">
+    <h1>Contact Us</h1>
+    <p>Have questions? Reach out to us using the form below or via the contact information provided.</p>
+    <ul>
+        <li><strong>Phone:</strong> 9825450165</li>
+        <li><strong>Email:</strong> glamourphotospro@gmail.com</li>
+        <li><strong>Address:</strong> Glamour Photos,Shop No.117,S.K.Colony, Warasia, Vadodara</li>
+    </ul>
+    <form action="/submit-contact" method="POST">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<div class="container" id="get-quote">
+    <h1>Get a Quote</h1>
+    <p>Tell us about your requirements, and we’ll get back to you with a custom quote.</p>
+    <form action="/submit-quote" method="POST">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+        <label for="contact">Phone Number</label>
+        <input type="text" id="contact" name="contact" placeholder="Your Phone Number" required>
+
+        <label for="service">Service Type</label>
+        <select id="service" name="service" required>
+            <option value="wedding">Wedding Photography</option>
+            <option value="birthday">Birthday Photography</option>
+            <option value="kids">Kids Photography</option>
+            <option value="maternity">Maternity Photography</option>
+            <option value="outdoor">Outdoor Shoots</option>
+        </select>
+
+        <label for="date">Event Date</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="location">Event Location</label>
+        <input type="text" id="location" name="location" placeholder="Event Location" required>
+
+        <label for="requirements">Additional Requirements</label>
+        <textarea id="requirements" name="requirements" rows="4" placeholder="Tell us more about your requirements"></textarea>
+
+        <button type="submit">Request Quote</button>
+    </form>
+</div>
+
+</body>
+</html>
